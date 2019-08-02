@@ -150,7 +150,7 @@ AppendText "${SysDir}/ZshRc" \
 AppendText "${HOME}/.zshrc" \
 	'# ZshRc' \
 	". '${SysDir}/ZshRc'"$'\n' &&
-"${SHELL}" -c "set -x && set +u && $( curl -fsSLv "${Url}" )"
+"${SHELL}" -c "set -x && set +u && OhMyZshDir='${OhMyZshDir}' && $( curl -fsSLv "${Url}" )"
 } &&
 : &&
 : &&
