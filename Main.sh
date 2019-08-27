@@ -6,7 +6,7 @@ Main() {
 	) &&
 	InstallShTools 'https://raw.githubusercontent.com/victor-yarema/ShToolsCoreInstaller/master/main.sh?md5=a35be7aa375670baedace672a14c0a99' &&
 	InstallShOptions &&
-	InstallOhMyZsh 'https://raw.githubusercontent.com/victor-yarema/oh-my-zsh/master/tools/install.sh?md5=cff389e35b08e1b7e77fd9fd121e073f' &&
+	InstallOhMyZsh 'https://raw.githubusercontent.com/victor-yarema/oh-my-zsh/master/tools/install.sh?md5=328b041c98ff0f170e79e411203c1768' &&
 	exec "${SHELL}" &&
 	true
 } &&
