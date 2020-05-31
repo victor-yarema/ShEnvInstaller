@@ -139,6 +139,9 @@ AppendText "${SysDir}/OhMyZshCfg" \
 AppendText "${SysDir}/OhMyZshCfg" \
 	'# History time format' \
 	$'HIST_STAMPS="yyyy-mm-dd"\n' &&
+AppendText "${SysDir}/OhMyZshCfg" \
+	'# HistSaveTrimSize' \
+	$'SAVEHIST=1000000\n' &&
 AppendText "${SysDir}/OhMyZsh" \
 	'# All' \
 	". '${SysDir}/OhMyZshCfg'
