@@ -107,6 +107,11 @@ AppendText "${SysDir}/StrictShRc" \
 AppendText "${SysDir}/StrictShRc" \
 	'# Make multithreaded' \
 	"alias Make='make -j 8 -O'"$'\n' &&
+AppendText "${SysDir}/StrictShRc" \
+	'# LS_COLORS' \
+'[ -z ${LS_COLORS+x} ] &&
+	eval "$(dircolors -b)"
+export LS_COLORS="$( echo $LS_COLORS | '"tr : '\n' | sed -E 's/(^ow=).*/\133;40/' | grep -v '^$' | tr '\n' :"' )"'$'\n' &&
 true
 ) &&
 . "${SysDir}/ShOptions" &&
